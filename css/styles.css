@@ -1,0 +1,58 @@
+
+body
+{
+  background-color:#fcf1f1;
+  font-family: sans-serif;
+
+}
+hr
+{
+  border-style:none;
+  border-top-style:dotted;
+  border-color:#8db596;
+  border-width:3.5px;
+  width:10%;
+}
+h1
+{
+  font-family: sans-serif;
+  color:#00587a;
+}
+h2
+{
+  color:#008891;
+}
+h3
+{
+  color: #41aea9;
+}
+button
+{
+  font-family: sans-serif;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px;
+  background-color: #a6f6f1;
+  border-radius: 8px;
+}
+/*************** class selector ******************/
+.buttonhover:hover
+{
+  background-color: #e8ffff;
+}
+.heading
+{
+  text-align: center;
+}
+.profile
+{
+  padding-left: 44%;
+  padding-right: 43%;
+}
+
+/*************** id selector ******************/
+#table1:hover{
+  background-color: #ebd4d4;
+  font-family: sans-serif;
+}
