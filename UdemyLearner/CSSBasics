@@ -1,0 +1,40 @@
+everything in a page can be treated as a box, give it height and width, and it can be individually styled using the border.
+When width is defined in px, it means the width of the box, when defined in % it means the width wrt to the page size, so if you magnify/reduce the page size, the % attribute will adjust according to the size, whereas the px will remain constant.
+to use it directly with the tag elements - body{}.
+Create a class and use - .foo{}, in HTML - <div class= "foo">
+Create a id and use - #fooId{}, in HTML - <div id="fooId">
+id has more precedence than class and then tag. id<< class<< tag
+id is unique and can be used in one place, class can be reused in multiple places.
+can use multiple classes in same element by - .foo1{} .foo2{} , in HTML - <div class="foo1 foo2">
+use it in  a HTML page using - <link rel="stylesheet" href="../styles.css">
+inline styling has precedence over cssSheet.
+selector{property:value;}
+- favicons - a small icon on the side of title. favicon.cc Can be used in the <link rel="icon" href="favicon.co">
+- boxmodel styling - 
+    1. margin - the space that is outside of the border and inside to screen. It can be used to increase space between two elements next to each other.
+    2. border - the border lies inside to margin and outside to padding, border can cover the element and can have its own thickness.
+    3. padding - the padding lies inside to border and outside to element. It is the space between border and element.
+    4. element - the original element which resides.
+
+    [1.Margin[2.Border[3.Padding[4.Element]3.Padding]2.Border]1.Margin]
+
+CSS styles - 
+
+background-color:blue;    - set the background color of the element.
+height: 20px/20%;         - set the height of the element
+width: 20px/20%           - set the width of the element
+border: solid 20px;       - sets a solid border with 20px
+border-color:blue         - set the border around the element to blue
+border-top-style: dashed; - the top of the border of an element 
+border-bottom-style
+border-right-style
+border-left-style
+border-width:4px;         - set the width of the border
+border-width: top right bottom left - sets the width for complete border in clockwise direction 
+color:#B97A95;            - set the element color
+font-size: 200px;         - set the font size;
+font-family: "Sans-Serif" - set the style of font family;
+margin-top:0px;           - sets the space between the element above and the current element
+margin-bottom:1px;        - sets the space/margin between the element below and the current element.
+margin-start:20px         - sets the space/margin between the element and the screen side being right.
+margin-end:10px;          - sets the space/margin between the element and the screen side being left.
