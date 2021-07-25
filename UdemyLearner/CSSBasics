@@ -46,7 +46,7 @@ selector{property:value;}
                   When an element is nested in a parent element, and then it uses the position as absolute, any changes will become related to the parent element.
                   <div><div></div></div>. When for inner div we use {position:absolute; top:10;} it'll actually move it to the top, since the margin wrt to parent.
                   When a parent div is set as position absolute, it becomes absolute to the body, which means if you give top... it takes this margin info from outside of body. check the positioningHTML.
-                    
+    4. fixed - the element using this, stays fixed even while scrolling. It'll stay there and while scrolling top/bottom it'll be present always                
 
 CSS styles - 
 
