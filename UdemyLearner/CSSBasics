@@ -17,6 +17,36 @@ selector{property:value;}
     4. element - the original element which resides.
 
     [1.Margin[2.Border[3.Padding[4.Element]3.Padding]2.Border]1.Margin]
+- inline elements - <span>,<img>,<a> These elements are inline and when used, they'll be next to each other. They use only the space required in the box model.
+- block elements - <h1>,<p>,<div>,<ol>,<ul>,<li>,<form>, these elements take up the complete row as a block rectangle, they dont allow other elements to be side by side.
+- All inline elements do not have access to setting the width of the rectangle it resides in. This is because HTML wants inline elements to act like inline and wants other elements to sit next to it. But if you try to manipulate the width, it wont be able to do so.
+- All block elements can have their width be changed and altered.
+- Using <span> we can make modifications to a block element, this span treats an element like an inline element. Ex - <p>This is a block element. but <span>This is a span</span> inside a block</p>.
+  A span allows you to add css to a block element's part without changing the complete element.
+
+- display - block, inline, inline-block, none
+    1. block - you can style an inline element to act like a block element by adding the display property as block. Adding a width will change the width of the element.
+               Ex - .foo{ display: block; width:100px} 
+    2. inline - a block element can be styled as an inline using the display:inline. Even if you provide the width info, it'll not change and element will continue to sit next to each other.
+               Ex - .foo{ display: inline; width:100px}
+    3. inline-block - inline block, allows the element to be on the same line and also use the width property. So keep elements in the same line and also allow it be sized according to the width.
+               Ex - .foo{display: inline-block}
+    4. none -  When we use none, the element is out of the flow of the page, which means the element is disappeared as well as other elements will take up its space.
+- visibility: hidden; - hides the element but the space it used, still exists on the page, and other elements will only come after it.
+
+- position - static, relative, absolute, fixed
+    1. static - the basic HTML positioning already in place. By default all elements are using static positioning. 
+                Ex. .foo{position: static;}
+    2. relative - Should be understood as adding a margin to where the element should have been in static position.
+                  If  you give an element a relative position, it means that the element's position is now relative to its original static position. 
+                  For ex - A box on the LHS of the screen with positioning relative, if you make .foo{position:relative; left:100px;}. This means that the element will move to the RHS of the screen 100px. 
+                  This is because, it will first see where it used to be in static position, 0,0,0,0. now Left 100 will ask it to move to the RHS of the screen. Left = increase in Left Margin = Movement to RHS of screen. Similar - Top = increase in Top margin = movement to bottom of screen.
+                  If an element is below this element and a Top is used, it'll overlap the below element.           
+    3. absolute - Should be understood as adding a margin to its parent element.
+                  When an element is nested in a parent element, and then it uses the position as absolute, any changes will become related to the parent element.
+                  <div><div></div></div>. When for inner div we use {position:absolute; top:10;} it'll actually move it to the top, since the margin wrt to parent.
+                  When a parent div is set as position absolute, it becomes absolute to the body, which means if you give top... it takes this margin info from outside of body. check the positioningHTML.
+                    
 
 CSS styles - 
 
@@ -38,3 +68,8 @@ margin-top:0px;           - sets the space between the element above and the cur
 margin-bottom:1px;        - sets the space/margin between the element below and the current element.
 margin-start:20px         - sets the space/margin between the element and the screen side being right.
 margin-end:10px;          - sets the space/margin between the element and the screen side being left.
+display: inline;
+display: block;
+display: inline-block;
+display: none;
+visibility: hidden;
