@@ -11,12 +11,13 @@ inline styling has precedence over cssSheet.
 selector{property:value;}
 - favicons - a small icon on the side of title. favicon.cc Can be used in the <link rel="icon" href="favicon.co">
 - boxmodel styling - 
-    1. margin - the space that is outside of the border and inside to screen. It can be used to increase space between two elements next to each other.
+    0. position - the position is the outermost cover between the screen and element
+    1. margin - the space that is outside of the border and inside to position. It can be used to increase space between two elements next to each other.
     2. border - the border lies inside to margin and outside to padding, border can cover the element and can have its own thickness.
     3. padding - the padding lies inside to border and outside to element. It is the space between border and element.
     4. element - the original element which resides.
 
-    [1.Margin[2.Border[3.Padding[4.Element]3.Padding]2.Border]1.Margin]
+    SCREEN[0.position[1.Margin[2.Border[3.Padding[4.Element]3.Padding]2.Border]1.Margin]0.position]SCREEN
 - inline elements - <span>,<img>,<a> These elements are inline and when used, they'll be next to each other. They use only the space required in the box model.
 - block elements - <h1>,<p>,<div>,<ol>,<ul>,<li>,<form>, these elements take up the complete row as a block rectangle, they dont allow other elements to be side by side.
 - All inline elements do not have access to setting the width of the rectangle it resides in. This is because HTML wants inline elements to act like inline and wants other elements to sit next to it. But if you try to manipulate the width, it wont be able to do so.
@@ -68,8 +69,12 @@ margin-top:0px;           - sets the space between the element above and the cur
 margin-bottom:1px;        - sets the space/margin between the element below and the current element.
 margin-start:20px         - sets the space/margin between the element and the screen side being right.
 margin-end:10px;          - sets the space/margin between the element and the screen side being left.
-display: inline;
-display: block;
-display: inline-block;
-display: none;
-visibility: hidden;
+display: inline;          - makes the element act like a inline element, takes only the space required and allows other element to fall next to it.Width and height manipulation does not work.
+display: block;           - makes the element act as a block element, occupies the entire screen width, does not allow elements to fall next to it. Width and height manipulation works  
+display: inline-block;    - makes the element act as both inline and block, allows elements to fall next to it and also allows width and height manipulation.
+display: none;            - makes the element dissappear from the page, elements can take its place.
+visibility: hidden;       - makes the element dissappear but other elements can't come in its place, empty space is still present in the page.  
+position: static;         - default position of element in HTML  
+position: relative;       - this defines the position of the element with the actual static position of the element. Directions work opposite than expected. When the relative is used, it takes the position from the body, if parent is body.
+position: absolute;       - this defines the position of the element with respect to the parent element, directions work as expected. When the absolute is used, it takes the position from the screen, if parent is body.
+position: fixed;          - this defines the position of the element as fixed, even if you scroll.
