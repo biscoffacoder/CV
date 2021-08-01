@@ -1,0 +1,106 @@
+body
+{
+    text-align: center;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: lightgreen;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-display: inherit;
+    color: lightgray;
+    
+}
+.nameContainer
+{
+    background-color: #343A40;
+    position: relative;
+    padding-top: 100px;
+   
+  
+}
+#cloud1
+{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 270px;
+    top:20px;
+
+}
+#cloud2
+{
+    position: absolute;
+    left: 250px;
+    width: 150px;
+    height: 150px;
+    top:200px;
+
+}
+#background1
+{
+    margin-top: 20px;
+}
+
+.middleContainer
+{
+   margin-top: 0px;
+   text-align: left;
+    background-color: #343A40;
+    position: relative;
+}
+#midh4
+{
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    left: 200px;
+    top:80px;
+}
+#midP
+{
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    left: 200px;
+    top:100px;
+}
+#midProfile
+{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.bottomContainer
+{
+    position:relative;
+    text-align: left;
+    background-color: #343A40;
+
+ }
+ #skills
+ {  margin-left: 200px;
+    width: 100px;
+    height: 200px;
+ }
+ #both4{
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    left: 320px;
+    top:80px;
+ }
+
+ #bottable
+ {
+    position: absolute;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    left: 310px;
+    top:100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     
+ }
+ .theaders
+ {
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+     font-weight: bold;
+     
+ }

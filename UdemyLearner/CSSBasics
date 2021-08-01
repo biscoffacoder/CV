@@ -78,3 +78,5 @@ position: static;         - default position of element in HTML
 position: relative;       - this defines the position of the element with the actual static position of the element. Directions work opposite than expected. When the relative is used, it takes the position from the body, if parent is body.
 position: absolute;       - this defines the position of the element with respect to the parent element, directions work as expected. When the absolute is used, it takes the position from the screen, if parent is body.
 position: fixed;          - this defines the position of the element as fixed, even if you scroll.
+text-align: center        - centers all inline element to the centre of the page, but has no effect if the display is block and has a width defined.
+margin: 0 auto 0 auto;    - This makes the top margin = 0, right = auto and so on, essentially centering any block element which is using the width manipulation.
