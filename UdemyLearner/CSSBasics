@@ -49,9 +49,25 @@ selector{property:value;}
                   When a parent div is set as position absolute, it becomes absolute to the body, which means if you give top... it takes this margin info from outside of body. check the positioningHTML.
     4. fixed - the element using this, stays fixed even while scrolling. It'll stay there and while scrolling top/bottom it'll be present always                
 
+- Units - em ,rem etc;
+    1. em - means it takes the relative unit from the parent tag. for ex <div><p></p></div>. If we style the width of div as - 2px; and style the p as 2em. This essentially means
+            that parent's value*x = 2*2 px = 4px. so if it was 1em, it'd mean 2*1 = 2px;
+    2. rem - means that the relative unit is taken from the root of the html. for ex as above  <div><p></p></div> div has 2px; p has 2rem; body has 1px. The rem will now find the root element which is body tag\
+             So now using body tag, it'll be 1*2 = 2px;
+
+- Reset browser styles using *{padding:0px, margin:0px;}
+- We can use a container div, and make it the topmost root of body and use it for margin:auto; to make all the content centred.
+
 CSS styles - 
 
 background-color:blue;    - set the background color of the element.
+background-image: url('./file/img'); - set the background image as required.
+background-repeat: no-repeat; - do not repeat the image more than once.
+background-position: xAxis, yAxis; - move the background image.
+background-position:top, center, left, right, bottom;  - alternate to using x,y axis.
+background-size: cover;   - shows the complete image irrespective of the size;
+background: url(./file/img) no-repeat center center/cover; - shorthand of the above properties.
+background-attachment: fixed; - makes the image fixed on the screen even if you scroll.
 height: 20px/20%;         - set the height of the element
 width: 20px/20%           - set the width of the element
 border: solid 20px;       - sets a solid border with 20px
@@ -62,9 +78,12 @@ border-right-style
 border-left-style
 border-width:4px;         - set the width of the border
 border-width: top right bottom left - sets the width for complete border in clockwise direction 
+border-radius:2px;        - Sets a border with rounded edge of 2px;
+border-top-left-raidus:2px; - sets the top left border radius for 2 px rounded.
 color:#B97A95;            - set the element color
 font-size: 200px;         - set the font size;
 font-family: "Sans-Serif" - set the style of font family;
+margin: auto;             - Setting the margin to auto, centers the element as all sides have equal margin.
 margin-top:0px;           - sets the space between the element above and the current element
 margin-bottom:1px;        - sets the space/margin between the element below and the current element.
 margin-start:20px         - sets the space/margin between the element and the screen side being right.
@@ -80,3 +99,7 @@ position: absolute;       - this defines the position of the element with respec
 position: fixed;          - this defines the position of the element as fixed, even if you scroll.
 text-align: center        - centers all inline element to the centre of the page, but has no effect if the display is block and has a width defined.
 margin: 0 auto 0 auto;    - This makes the top margin = 0, right = auto and so on, essentially centering any block element which is using the width manipulation.
+box-sizing:border-box;    - This restricts the defined width, usually padding/margin/border gets added to width and the box size increases, using this property, restricts the box size to defined width, but the elements adjusts themselves inside to accomodate the properties.
+max-width: 100px;         - This is used to have dynamic width alignment. It keeps the max width as 100px, and as soon as we shrink to mobile size, it allows to let the content fall below and not be scrollable.
+float:left; width: 70%    - This style is not used currently but what it does is, it allows elements to stack next to each other with the % being the size. Make use of box-sizing:border-box to avoid spills. Elements added after this are added behind it. not below.
+clear:both;               - Needs to be used with float to clear the float values and make the element to fall below, rather than behind it.
