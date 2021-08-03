@@ -97,6 +97,7 @@ position: static;         - default position of element in HTML
 position: relative;       - this defines the position of the element with the actual static position of the element. Directions work opposite than expected. When the relative is used, it takes the position from the body, if parent is body.
 position: absolute;       - this defines the position of the element with respect to the parent element, directions work as expected. When the absolute is used, it takes the position from the screen, if parent is body.
 position: fixed;          - this defines the position of the element as fixed, even if you scroll.
+position: sticky;         - this allows the element to be stuck on a place, and it remains there even if we scroll. We can define where it needs to stick once scrollable.
 text-align: center        - centers all inline element to the centre of the page, but has no effect if the display is block and has a width defined.
 margin: 0 auto 0 auto;    - This makes the top margin = 0, right = auto and so on, essentially centering any block element which is using the width manipulation.
 box-sizing:border-box;    - This restricts the defined width, usually padding/margin/border gets added to width and the box size increases, using this property, restricts the box size to defined width, but the elements adjusts themselves inside to accomodate the properties.
@@ -112,3 +113,4 @@ list-style:none;          - This removes the bullets from the list.
 line-height:2em;          - This provides line spacing between two line elemenets like Texts.
 div li:last-child{}       - selects the last child element of the list to be styled.
 overflow:auto;
+z-index:1;                - Higher the z index is, the closer the element appears to the screen.
