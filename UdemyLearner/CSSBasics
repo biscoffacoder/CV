@@ -57,7 +57,7 @@ selector{property:value;}
 
 - Reset browser styles using *{padding:0px, margin:0px;}
 - We can use a container div, and make it the topmost root of body and use it for margin:auto; to make all the content centred.
-
+- pseudo selectors - We can select elements based on their position like first child, last child, nth child, n+1th child etc and have their own defined properties.
 CSS styles - 
 
 background-color:blue;    - set the background color of the element.
@@ -103,3 +103,12 @@ box-sizing:border-box;    - This restricts the defined width, usually padding/ma
 max-width: 100px;         - This is used to have dynamic width alignment. It keeps the max width as 100px, and as soon as we shrink to mobile size, it allows to let the content fall below and not be scrollable.
 float:left; width: 70%    - This style is not used currently but what it does is, it allows elements to stack next to each other with the % being the size. Make use of box-sizing:border-box to avoid spills. Elements added after this are added behind it. not below.
 clear:both;               - Needs to be used with float to clear the float values and make the element to fall below, rather than behind it.
+text-decoration: underline; - Text decoration can be used when working with texts, links etc.
+a:hover {}                - when hovered over a link.
+a:active{}                - when clicked or long pressed, style can be provided.
+a:visited{}               - once the link has been clicked.
+cursor:pointer;           - to use the pointer style when hovered over, we can use this css style.
+list-style:none;          - This removes the bullets from the list.
+line-height:2em;          - This provides line spacing between two line elemenets like Texts.
+div li:last-child{}       - selects the last child element of the list to be styled.
+overflow:auto;
