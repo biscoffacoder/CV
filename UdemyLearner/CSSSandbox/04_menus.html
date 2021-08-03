@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Navigation bars</title>
     <style>
         .navbar {
             border-width: 2px;
@@ -51,9 +51,15 @@
 
         .sidemenu li {
             list-style: none;
+            border-radius: 8px;
             padding: 10px;
-            border: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
         }
+
+        .sidemenu li:last-child {
+            border-bottom: none;
+        }
+
 
         .sidemenu li a {
             text-decoration: none;
@@ -65,9 +71,42 @@
         .sidemenu li:hover {
             background-color: cadetblue;
         }
-        .sidemenu li a:hover
+
+        .sidemenu li a:hover {
+            color: black;
+        }
+
+        .navbar-1 {
+            background-color: burlywood;
+            
+            border-radius: 10px;
+            padding: 0px;
+            width: fit-content;
+            margin:0px;
+        }
+
+        .navbar-1 li {
+            display: inline-block;
+            border: 1px solid darkslateblue;
+            border-radius: 10px;
+            
+        }
+
+        .navbar-1 li a {
+            text-decoration: none;
+            padding: 0px 10px;
+            color: black;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .navbar-1 li:hover {
+            background-color: cadetblue;
+
+        }
+        .navbar-1 li a:hover
         {
-            color:black;
+            color:whitesmoke;
         }
     </style>
 </head>
@@ -85,6 +124,16 @@
     <br>
 
     <ul class="sidemenu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Log in</a></li>
+    </ul>
+    <br>
+    <br>
+
+    <ul class="navbar-1">
         <li><a href="#">Home</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Contact Us</a></li>
