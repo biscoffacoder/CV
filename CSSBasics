@@ -148,7 +148,13 @@ flex-direction: row-reverse - reverses the alignment by bringing last item first
 flex-direction: column-reverse - reverses the column alignment by bringing the last item on first.  
 flex-wrap:nowrap;         - By default it makes the elements smaller until it can't anymore, but does not let it move to the next row.
 flex-wrap:wrap;           - Lets the elements move to the next row as the screen size decreases.
- 
+flex-shrink: 0;           - Does not let the width decrease even if the screen is small.
+flex-grow:1;              - Makes the element to grow to the size of the screen, essentially making sure that the flex container does not have empty space left. 
+flex-grow:2;              - If there is a element already with flex-grow:1, it'll grow the double of it.
+flex-basis:0              - This makes the elements which use grow to be exact their values - 1,2,3 etc.
+flex:grow shrink basis;
+flex:1 0 200px;           - essentially means that, set a width of 200px, non shrinkable and growth will be 1 times of this.
+
 
 
 

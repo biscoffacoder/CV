@@ -20,6 +20,8 @@
             border: 1px solid black;
             height:200px;
             margin-bottom: 10px;
+            flex-wrap: wrap;
+            
 
         }
         .item
@@ -30,7 +32,7 @@
             text-align: center;
             padding: 5px;
             width: 200px;
-
+            
         }
         .container2
         {
@@ -38,6 +40,7 @@
             flex-direction: column;
             width: 220px;
             border:1px solid black;
+            
          
         }
         .container1
@@ -46,29 +49,46 @@
             flex-direction: row-reverse;
             border:1px solid black;
             margin-bottom: 10px;
+            
+        }
+        #item5
+        {
+            
+            flex-basis: 250px;
+            flex-shrink: 0;
+        }
+        #item8
+        {
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+        #item7
+        {
+            flex-grow: 2;
+            flex-basis: 0;
         }
 
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item" id="1"><h2>Item inside Flex container 1</h2></div>
-        <div class="item" id="2"><h2>Item inside Flex container 2</h2></div>
-        <div class="item" id="3"><h2>Item inside Flex container 3</h2></div>
-        <div class="item" id="4"><h2>Item inside Flex container 4</h2></div>
+        <div class="item" id="item1"><h2>Item inside Flex container 1</h2></div>
+        <div class="item" id="item2"><h2>Item inside Flex container 2</h2></div>
+        <div class="item" id="item3"><h2>Item inside Flex container 3</h2></div>
+        <div class="item" id="item4"><h2>Item inside Flex container 4</h2></div>
     </div>
     
     <div class="container1">
-        <div class="item" id="5"><h2>Item inside Flex container 5</h2></div>
-        <div class="item" id="7"><h2>Item inside Flex container 7</h2></div>
-        <div class="item" id="8"><h2>Item inside Flex container 8</h2></div>
+        <div class="item" id="item5"><h2>Item inside Flex container 5</h2></div>
+        <div class="item" id="item7"><h2>Item inside Flex container 7</h2></div>
+        <div class="item" id="item8"><h2>Item inside Flex container 8</h2></div>
     </div>
     
     <div class="container2">
-        <div class="item" id="9"><h2>Item inside Flex container 9</h2></div>
-        <div class="item" id="10"><h2>Item inside Flex container 10</h2></div>
-        <div class="item" id="11"><h2>Item inside Flex container 11</h2></div>
-        <div class="item" id="12"><h2>Item inside Flex container 12</h2></div>
+        <div class="item" id="item9"><h2>Item inside Flex container 9</h2></div>
+        <div class="item" id="item10"><h2>Item inside Flex container 10</h2></div>
+        <div class="item" id="item11"><h2>Item inside Flex container 11</h2></div>
+        <div class="item" id="item12"><h2>Item inside Flex container 12</h2></div>
     </div>
     
 </body>
