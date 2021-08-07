@@ -63,7 +63,23 @@ selector{property:value;}
                   write using - @media(max-width/min-width)etc,  
                   There are 4 kinds of media type - screen, print, all, speech. We can conditionally load a css with media query using - 
                   <link  rel="stylesheet" media="screen and (max-width:500px)" href="mobile.css"> - This will load the mobile.css only when the width is less than 500px;
-                   
+
+- Flex box -  Modern layout mode in CSS3, "flex" is a vlaue for the display property, replaces float and aligns item both horizontally and vertically. They can be re-ordered via CSS
+              If a container div is assigned display:flex, then it creates all direct child elements as flex items.
+              It aligns all child elements horizontally by default. X axis is called "main axis", Y axis is called "cross axis"
+              When the alignment is done by column(vertically), the roles of the axis get reversed. X axis becomes cross and Y axis becomes main.
+              Flex wrap helps to move elements to next row when screen size decreases.
+              Default setting - horizontally
+              main start = bottom left of the element.
+              main end   = bottom right of the element.
+              cross start = top right of the element.
+              cross end = bottom right of the element.
+              main size = main start to main end. 
+
+              justify-content: align along the main axis (horizontally)
+              align-items:     align items along the cross axis (vertically)
+              align-content:   align when extra space in the cross axis  
+              flex-direction: row
 
 
 CSS styles - 
@@ -122,6 +138,18 @@ line-height:2em;          - This provides line spacing between two line elemenet
 div li:last-child{}       - selects the last child element of the list to be styled.
 overflow:auto;
 z-index:1;                - Higher the z index is, the closer the element appears to the screen.
+
+Flexbox styling - 
+
+display:flex;             - Sets the display as a flexbox and sets the default flex direction as row.
+flex-direction:row;       - default direction for setting items row wise.
+flex-direction:column;    - aligns the item column wise.
+flex-direction: row-reverse - reverses the alignment by bringing last item first and first element to right most of the screen.
+flex-direction: column-reverse - reverses the column alignment by bringing the last item on first.  
+flex-wrap:nowrap;         - By default it makes the elements smaller until it can't anymore, but does not let it move to the next row.
+flex-wrap:wrap;           - Lets the elements move to the next row as the screen size decreases.
+ 
+
 
 
 Media queries - 
