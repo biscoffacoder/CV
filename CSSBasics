@@ -142,8 +142,8 @@ z-index:1;                - Higher the z index is, the closer the element appear
 Flexbox styling - 
 
 display:flex;             - Sets the display as a flexbox and sets the default flex direction as row.
-flex-direction:row;       - default direction for setting items row wise.
-flex-direction:column;    - aligns the item column wise.
+flex-direction:row;       - default direction for setting items row wise. X axis = main axis, Y axis = cross axis
+flex-direction:column;    - aligns the item column wise. X axis = cross axis, Y axis = main axis
 flex-direction: row-reverse - reverses the alignment by bringing last item first and first element to right most of the screen.
 flex-direction: column-reverse - reverses the column alignment by bringing the last item on first.  
 flex-wrap:nowrap;         - By default it makes the elements smaller until it can't anymore, but does not let it move to the next row.
@@ -154,6 +154,18 @@ flex-grow:2;              - If there is a element already with flex-grow:1, it'l
 flex-basis:0              - This makes the elements which use grow to be exact their values - 1,2,3 etc.
 flex:grow shrink basis;
 flex:1 0 200px;           - essentially means that, set a width of 200px, non shrinkable and growth will be 1 times of this.
+flex:1;                   - If given on all flex-items, the size will be equal if width def is not present.
+align-items: flex-end;    - Depending on the flex-direction: row/column Aligns items across cross axis, to the bottom of the container. This is applicable to the container and not individual flex item as, this defines how the flex container should align all children items.
+align-items: flex-start;  - Depending on the flex-direction: row/column Aligns item across cross axis, to the top of the container. applicable only to container. 
+align-items: stretch;     - Depending on the flex-direction: row/column Stretches the content to the size of the container across the cross axis.
+justify-content: center;  - Depending on the flex-direction: row/column Aligns the flex items on the main axis to the center.
+justify-content: start;   - Depending on the flex-direction: row/column aligns the flex items to the start of the main axis.
+justify-content: end;     - Depending on the flex-direction: row/column aligns the flex items to the end of the main axis.
+justify-content: space-around  -  Equally spaces the elements across the main axis including the edges of the screen.
+justify-content: space-between -  Equally spaces the elements leaving no space at the edges of the screen.
+align-self: flex-start;   - Individual element can be taken and placed using this. It will  however style across the container's flex-direction row/column and either align/justify usecase
+align-self: flex-end; 
+
 
 
 
