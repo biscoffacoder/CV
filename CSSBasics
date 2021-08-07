@@ -61,7 +61,9 @@ selector{property:value;}
 
 - Media queries - They allow to primarily resize or use styling depending on these queries.
                   write using - @media(max-width/min-width)etc,  
-
+                  There are 4 kinds of media type - screen, print, all, speech. We can conditionally load a css with media query using - 
+                  <link  rel="stylesheet" media="screen and (max-width:500px)" href="mobile.css"> - This will load the mobile.css only when the width is less than 500px;
+                   
 
 
 CSS styles - 

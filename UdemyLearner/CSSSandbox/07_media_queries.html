@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+            color: pink;
+            text-align: center;
+            
+            
+        }
+        .widescreen
+        {
+            display: none;
+        }
+        .laptop
+        {
+            display: none;
+        }
+        .tablet
+        {
+            display: none;
+        }
+        .normal
+        {
+            display: none;
+        }
+        .mobile
+        {
+            display: none;
+        }
+        .landscape
+        {
+            display: none;
+        }
+        @media(min-width:1280px)
+        {
+            .widescreen
+            {
+                display: block; 
+            }
+            body
+            {
+               
+                background-color: grey;
+            }
+
+        }
+        @media(min-width:801px) and (max-width:1279px)
+        {
+            .laptop
+            {
+                display: block;
+            }
+            body
+            {
+                background-color: blue;
+            }
+        }
+        @media(min-width:500px) and (max-width:800px)
+        {
+            .tablet
+            {
+                display: block;
+            }
+            body
+            {
+                background-color: goldenrod;
+            }
+        }
+        @media (max-width:499px)
+        {
+            .mobile
+            {
+                display: block;
+            }
+            body
+            {
+                background-color: red;
+            }
+        }
+        @media (max-height:500px)
+        {
+            .landscape
+            {
+                display:block;
+            }
+            body
+            {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="widescreen">
+        <h2>widescreen</h2>
+    </div>
+    <div class="laptop">
+        <h2>laptop</h2>
+    </div>
+
+    <div class="tablet">
+        <h2>tablet</h2>
+    </div>
+    <div class="normal">
+        <h2>normal</h2>
+    </div>
+    <div class="mobile">
+        <h2>mobile</h2>
+    </div>
+    <div class="landscape">
+        <h2>landscape</h2>
+    </div>
+</body>
+
+</html>
