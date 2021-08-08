@@ -24,10 +24,81 @@ li
    
     color: #00C1D4;
 }
+
+/**Buttons Styles**/
 .btn
 {
     background-color: #00C1D4;
-    color:whitesmoke;
+    color:black;
     padding:10px 10px;
     margin-top:20px;
+    border-radius: 5px;
+}
+.btn:hover
+{
+    background-color: #57837B;
+    color:whitesmoke;
+    border-radius: 5px;
+}
+.box-btn
+{
+    background-color: whitesmoke;
+    color:#00C1D4;
+    border-radius: 5px;
+}
+/**Headers and Para Styles**/
+.content-header
+{
+    font-size: 34px;
+    color: white;
+    padding: 5px 0px;
+}
+.content-header-dark
+{
+    font-size: 30px;
+    padding:10px;
+    color:#222831;
+    font-weight: bolder;
+    background: transparent;
+    border:1px solid #00C1D4;
+    border-radius:10px;
+}
+.box-headers
+{
+    font-size:26px;
+    color:#364547;
+    padding: 10px 0px;
+}
+.content-para
+{
+    font-size:20px;
+    color:whitesmoke;
+    padding:10px 5px;
+    max-width: 600px;
+}
+.content-para-light
+{
+    font-size:20px;
+    color:#515E63;
+    padding:0px 5px;
+    max-width: 600px;
+}
+.content-para-tur
+{
+    font-size:20px;
+    color:#00C1D4;
+    padding:10px 5px;
+    max-width: 600px;
+}
+/*Flex styling*/
+.flex-column
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.flex-row
+{
+    display: flex;
+    flex-direction: row;
 }

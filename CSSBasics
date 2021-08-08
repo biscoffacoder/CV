@@ -138,6 +138,11 @@ line-height:2em;          - This provides line spacing between two line elemenet
 div li:last-child{}       - selects the last child element of the list to be styled.
 overflow:auto;
 z-index:1;                - Higher the z index is, the closer the element appears to the screen.
+.foo::before{             - This places the content before the foo div, this will cover the entire div, to bring the contents use z-index:10; 
+    content:'';
+    background:red;
+}            
+
 
 Flexbox styling - 
 

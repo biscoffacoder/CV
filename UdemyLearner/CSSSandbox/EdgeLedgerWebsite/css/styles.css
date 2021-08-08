@@ -1,3 +1,4 @@
+/** Nav bar Styles**/
 .nav-bar
 {
     background-color: #515E63;
@@ -36,7 +37,7 @@
 {
     border-bottom: 2px solid #00C1D4;
 }
-
+/** Home Background Styles**/
 .home-bg
 {
     width: 100%;
@@ -50,20 +51,6 @@
     justify-content: center;
     text-align: center;
 
-}
-
-.content-header
-{
-    font-size: 34px;
-    color: white;
-    padding: 5px 0px;
-}
-.content-para
-{
-    font-size:20px;
-    color:whitesmoke;
-    padding:0px 5px;
-    max-width: 600px;
 }
 
 .home-bg::before
@@ -83,3 +70,148 @@
     z-index: 10;
 }
 
+/** Feature Styles**/
+.feature
+{
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+.boxes
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    background-color: whitesmoke;
+ }
+.boxes .box
+{
+    background-color: whitesmoke;
+    color:#00C1D4;
+    padding:20px;
+    margin-top: 20px;
+    flex:1;
+}
+.boxes .box .content-para
+{
+    margin-top: 10px;
+    text-align: center;
+    padding:5px 0px;
+    color: #515E63;
+}
+.twins
+{
+    justify-content: space-between;
+}
+#box4
+{
+    background: url('../images/team.jpeg') no-repeat center center/cover;
+    
+    
+}
+.box-f
+{
+    display: flex;
+    width: 50%;
+    height: 300px;
+    margin-top:40px;
+    background: #00C1D4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box-f .content-para
+{
+    color:#515E63;
+    margin-top: 20px;
+    padding:10px;
+    text-align: center;
+
+}
+/*Blogs Styling*/
+.blogs
+{
+    overflow: hidden;
+}
+.blog-gallery
+{
+    width: 100%;
+    height:100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding:20px;
+    
+}
+.blog-gallery img
+{
+    flex:25%;
+    max-width: 25%;
+    flex-wrap: wrap;
+    max-height: 50%;
+    border-radius: 10px;
+
+}
+.blog-gallery p
+{
+    
+    margin: 0px 10px;
+    flex:25%;
+    max-width: 25%;
+    flex-wrap: wrap;
+
+}
+.blog-gallery img:hover
+{
+    opacity: 0.7;
+}
+.blog .flex-column
+{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 50px;
+    background: #515E63;
+}
+.blog-sec
+{
+    background: url('../images/blog-note.jpeg') no-repeat center center/cover;
+    width: 50%;
+    height: 400px;
+
+}
+.boxes-rev
+{
+    flex-direction: row-reverse;
+    align-items: center;
+    padding-bottom: 0px;
+    background-color: #515E63;
+    
+}
+.side-column
+{
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center space-evenly;
+}
+
+/*Footer styling*/
+.footer-container
+{
+    background-color:whitesmoke;
+    color: #515E63;
+    padding:10px;
+}
+
+.footer-container h4
+{
+    padding-bottom: 5px;
+    
+}
+.footer-container i:hover
+{
+color:#00C1D4;
+}
