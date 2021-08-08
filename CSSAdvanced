@@ -9,7 +9,7 @@ Topics to be covered in CSS Advanced -
 
  - Targeted Selectors - If we want to select a direct child of  a parent and style it, We can use Targeted Selectors
                         This allows us to style only the direct children. .foo > p{} This means the direct "p" child elements of foo parent.
-
+- Psuedo Selectors nthChild - Select childs of the elements using li:first-child etc..
 
 
 
@@ -23,3 +23,11 @@ CSS Styling -
 .foo + p {}            - Any p tag directly after <foo></foo>.
 a[target]{}            - Select using the attribute of a tag, can be used for any element.
 a[target='_blank']     - Select using the attribute value of a tag.
+li{SomeValue $}*20     - Generates a list with text "SomeValue" incremented by number and 20 of them. Shorthand
+li:first-child{}       - Style the first child;
+li:last-child{}        - Styles the last child;
+li:nth-child(2){}      - Styles the 2nd child.
+li:nth-child(odd){}    - Every odd child can be styled using this.
+li:nth-child(even){}   - Every even child can be styled using this
+li:nth-child(Xn+offset){}   - Offset is where the first style will be put in effect and then after every X times.
+li:nth-child(3n+2){}   - Styles the 2nd element and then after every 3rd element from the 2nd element. 
