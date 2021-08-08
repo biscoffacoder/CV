@@ -1,0 +1,25 @@
+Topics to be covered in CSS Advanced - 
+1. Targeted Selectors.
+
+
+
+
+
+
+
+ - Targeted Selectors - If we want to select a direct child of  a parent and style it, We can use Targeted Selectors
+                        This allows us to style only the direct children. .foo > p{} This means the direct "p" child elements of foo parent.
+
+
+
+
+
+
+
+
+
+CSS Styling - 
+.foo > h1{color: red}  - Direct child of foo = "h1" and style this as red.
+.foo + p {}            - Any p tag directly after <foo></foo>.
+a[target]{}            - Select using the attribute of a tag, can be used for any element.
+a[target='_blank']     - Select using the attribute value of a tag.
