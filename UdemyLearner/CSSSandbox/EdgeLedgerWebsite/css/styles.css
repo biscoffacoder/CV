@@ -5,6 +5,9 @@
     height: 60px;
     justify-content: space-between;
     opacity: 0.8;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
     
 }
 .nav-bar h2
@@ -32,5 +35,51 @@
 .nav-bar ul li:hover
 {
     border-bottom: 2px solid #00C1D4;
+}
+
+.home-bg
+{
+    width: 100%;
+    height:100vh;
+    background-color: whitesmoke;
+    background: url('../images/header-bg.jpeg') no-repeat center center/cover;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.content-header
+{
+    font-size: 34px;
+    color: white;
+    padding: 5px 0px;
+}
+.content-para
+{
+    font-size:20px;
+    color:whitesmoke;
+    padding:0px 5px;
+    max-width: 600px;
+}
+
+.home-bg::before
+{
+    content: '';
+    top:0px;
+    left:0px;
+    width: 100%;
+    height: inherit;
+    background: #2B2B2B;
+    position: absolute;
+    opacity: 0.4;
+}
+
+.home-bg *
+{
+    z-index: 10;
 }
 

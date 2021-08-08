@@ -21,6 +21,13 @@ li
 }
 .text-primary
 {
-    display: inline;
+   
     color: #00C1D4;
+}
+.btn
+{
+    background-color: #00C1D4;
+    color:whitesmoke;
+    padding:10px 10px;
+    margin-top:20px;
 }
