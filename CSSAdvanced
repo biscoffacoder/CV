@@ -9,8 +9,12 @@ Topics to be covered in CSS Advanced -
 
  - Targeted Selectors - If we want to select a direct child of  a parent and style it, We can use Targeted Selectors
                         This allows us to style only the direct children. .foo > p{} This means the direct "p" child elements of foo parent.
-- Psuedo Selectors nthChild - Select childs of the elements using li:first-child etc..
+- Psuedo Selectors 
+                    1. nthChild - Select childs of the elements using li:first-child etc..
+                    2. after   - This adds content after the element, but it does not add in the actual DOM object. It gets added via style.
+                    3. before   - This gets added before the elementin use. Same as above.
 
+-Box shadows -      Individual boxes can be stylised using box-shadow - offset-x, offset -y 
 
 
 
@@ -31,3 +35,11 @@ li:nth-child(odd){}    - Every odd child can be styled using this.
 li:nth-child(even){}   - Every even child can be styled using this
 li:nth-child(Xn+offset){}   - Offset is where the first style will be put in effect and then after every X times.
 li:nth-child(3n+2){}   - Styles the 2nd element and then after every 3rd element from the 2nd element. 
+.foo:before{content:'*'} - Adds * before the foo element. But it does not get added to DOM. Can check using F11.
+.foo:after{content:'*'}  - Adds * after the foo element.
+box-shadow: offset-x offset-y blur-radius spread-radius color ;  - Puts shadows on any box, x axis, y axis, z axis
+box-shadow : inset/offset offset-x offset-y blur-radius spread-radius color; Inset/offset gives the feel of coming in and out of the box.
+box-shadow: 10px 10px 3px blue; shadow on x, y and blurred by 3 color blue;
+box-shadow:-5px -5px  10px 1px red; shadow on x, y, blurred by 10 and 1px spread across; 
+text-shadow: h-shadow v-shadow  blur color ; horizontal shadow, vertical shadow, blur, 
+text-shadow: 10px 10px 0.2rem blue; Creates a shadow on the text horizontally and vertically with a blur of 0.2rem. We cna use negative values as well..
