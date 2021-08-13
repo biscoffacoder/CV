@@ -25,7 +25,7 @@ Topics to be covered in CSS Advanced -
 
 - CSS transitions    - Transitions happen on a event like hover or click etc.
 
-
+- CSS Transform      - Trasnform how the element is currently present in the screen, transform: rotate(25deg)/ skew(25deg) / scale(2)
 
 
 CSS Styling - 
@@ -76,3 +76,9 @@ transition: property duration timing delay;
 transition: background, border-radius 2s ease-in 2s;
 transition: all 2s ease-in 2s;      
 foo:hover{background:red;}
+transform: rotate(25deg);         - Rotate the element by 25 degrees.
+transform: skew(25deg);           - Skew the element by 25deg
+transform: scale(3)               - Scale the element by 3times.
+transform: translateY(100px);     - Directly move the element from Y axis by 100px;
+transform: translateX(100px);     - Direclty move the element from X axis
+transform: translate(X,Y)    
