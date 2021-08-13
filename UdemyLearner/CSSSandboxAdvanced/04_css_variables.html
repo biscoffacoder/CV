@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        :root {
+            --light-color: lightblue;
+            --dark-color: teal;
+            --back-color: lightgrey;
+
+
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navigation {
+            text-align: center;
+            background: var(--light-color);
+            border-bottom: 2px var(--dark-color) solid;
+
+        }
+
+        .container {
+            display: flex;
+            margin-top: 10px;
+            border-bottom: 2px var(--dark-color) dotted;
+        }
+
+        .box {
+            flex: 1;
+            text-align: center;
+            background: var(--light-color);
+            margin: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navigation">
+        CSS Variables
+    </div>
+    <div class="container">
+        <div class="box">
+            <h1 class="heading">Heading 1</h1>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, assumenda.</p>
+        </div>
+        <div class="box">
+            <h1 class="heading">Heading 2</h1>
+            <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ratione eius? Eos?</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
