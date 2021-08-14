@@ -1,0 +1,19 @@
+Css Grid - is more powerful than flex, where in it provides the way to add row and columns 2D styling where flex could only provide 1D.
+            To use grid, we need to establish the parent as a grid using display:grid, then we can assign properties like grid-template-column: no.ofColumn.
+            Spacing can be provided using grid-gap:1px;
+
+
+CSS Grid styles
+
+.foo
+{
+    display:grid;
+    grid-template-columns: 100px 100px 200px;
+    grid-gap:2rem;
+}
+display:grid;                       - Makes the parent element as a grid.
+grid-template-columns: x;           - We can choose how many columns we want by specifying here in "x", the width assigned here will reflect.
+grid-template-columns: 20px 200px 20px;
+grid-template-columns: repeat(3,200px); - Instead of repeating the same info, we can use repeat(coulmn, width); to create columns on the fly.
+grid-template-columns: 1fr 2fr 1fr;  - Using fractions instead of px or %.
+grid-gap:2px;                       - Auto assigns gap across the grids created on all sides.
