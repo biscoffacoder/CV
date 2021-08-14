@@ -1,11 +1,12 @@
 Topics to be covered in CSS Advanced - 
 1. Targeted Selectors.
-
-
-
-
-
-
+2. Psuedo Selectors
+3. Box shadows
+4. Text-shadows
+5. CSS variables
+6. Keyframe animations
+7. CSS transitions
+8. CSS Transform
 
  - Targeted Selectors - If we want to select a direct child of  a parent and style it, We can use Targeted Selectors
                         This allows us to style only the direct children. .foo > p{} This means the direct "p" child elements of foo parent.
