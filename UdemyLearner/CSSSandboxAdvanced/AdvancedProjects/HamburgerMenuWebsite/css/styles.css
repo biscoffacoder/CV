@@ -1,0 +1,81 @@
+*
+{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+:root
+{
+    --primary-color: rgba(13,110,139,0.4);
+    --secondary-color: rgba(229,148,0,0.9);
+    --overlay-color: rgba(24,39,51,0.85);
+    --btn-color:lightgreen;
+    --animate-speed:1s;
+}
+body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: whitesmoke;
+    line-height: 1.4;
+}
+
+.showcase
+{
+    background: var(--primary-color);
+    height:100vh;
+    position: relative;
+    color: whitesmoke;
+    
+}
+.showcase:before
+{
+    content:'';
+    background: url('../images/Adidas-bg1.jpeg') no-repeat center center/cover;
+    width: 100%;
+    top:0px;
+    left:0px;
+    position:absolute;
+    height: 100%;
+    z-index: -1;
+
+}
+.showcase-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+
+}
+h1
+{
+   
+    font-size: 3rem;
+    padding:20px;
+   }
+   p
+   {
+     
+       padding:10px 0px;
+       margin-bottom: 10px;
+   }
+   
+.btn
+{
+    text-decoration: none;
+    color: var(--overlay-color);
+    background: var(--btn-color);
+    padding:10px 20px;
+    border-radius: 6px;
+    transition: all 1s ease-in-out;
+}
+.btn:hover
+{
+    background: whitesmoke;
+    color: teal;
+    border-radius: 10px;
+}
+
+
