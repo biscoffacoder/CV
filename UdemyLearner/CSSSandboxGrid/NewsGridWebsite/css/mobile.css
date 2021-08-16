@@ -1,0 +1,39 @@
+.btn
+{
+    padding:5px;
+    border-radius: 2px;
+}
+
+#navigation .container
+{
+    display: flex;
+    flex-direction: column;
+    height:80px;
+    align-items: center;
+    
+    
+}
+#navigation .container #logo
+{
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+#navigation .container .social
+{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+#navigation .container .social i
+{
+    font-size: 1rem;
+}
+
+#sec1
+{
+    height: 60vh;
+}
+#sec1 .container .tile-content
+{
+    margin-top: 70px;
+}
