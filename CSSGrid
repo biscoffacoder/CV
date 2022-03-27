@@ -1,0 +1,38 @@
+Css Grid - is more powerful than flex, where in it provides the way to add row and columns 2D styling where flex could only provide 1D.
+            To use grid, we need to establish the parent as a grid using display:grid, then we can assign properties like grid-template-column: no.ofColumn.
+            Spacing can be provided using grid-gap:1px;
+
+
+CSS Grid styles
+
+.foo
+{
+    display:grid;
+    grid-template-columns: 100px 100px 200px;
+    grid-gap:2rem;
+}
+display:grid;                       - Makes the parent element as a grid.
+grid-template-columns: x;           - We can choose how many columns we want by specifying here in "x", the width assigned here will reflect.
+grid-template-columns: 20px 200px 20px;
+grid-template-columns: repeat(3,200px); - Instead of repeating the same info, we can use repeat(coulmn, width); to create columns on the fly.
+grid-template-columns: 1fr 2fr 1fr;  - Using fractions instead of px or %.
+grid-gap:2px;                        - Auto assigns gap across the grids created on all sides.
+grid-template-rows: 1fr 2fr 1fr;     - Creates rows with the defined fractions. If specific values are not provided for the row remaining,
+                                      they'll stay as normal. We can set these as well using the below property.
+grid-auto-rows: 3fr;                 - Makes all the rows that are not covered by the above property.
+grid-row-start: 1;                   - Specifies where a grid element should start at. It is a property used on a single grid element.
+grid-row-end:4;                      - Specifies where the grid element should end at. 4 here means it will go 4 lines from the top down.
+grid-column-start :2;                - Specifies where the column should start at.
+grid-column-end: 4;                  - Specifies where the column should end at.
+grid-column: 2 / span 3;             - Shorthand way of writing grid-column-start :2; , grid-column-end: 4; Notice how the end is lowered by 1. 
+grid-row : 1 / span 3;               - Shorthand way of writing grid-row-start: 1; grid-row-end:4;. Notice how the end is lowered by 1.
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); - Auto fit describes that the grid columns will be responsive when the screen size
+                                                               is reduced or increased. minmax property will ensure that each grid element is minimum of the defined and maximum of the defined, always.
+grid-template-area:                                  
+'foo foo foo foo'
+'foo1 foo2 foo3 foo4'
+'foo5 foo5 foo6 foo7'                - The grid template area is a visualiztion of how the page should look like, This allows us to create a 
+                                       template area and individual elements will fall in place as described here. So "foo" takes up all 4 columns, individual "foo1,2,3,4" take up one grid space, and so on. It is essesential to describe the maximum number of columns that will be required to fulfill all elements info.
+grid-area: foo1;                     - For an individual element, we need to define the grid area, so that it can now fall in place where the 
+                                       grid-template-area wants it to be.
+                                

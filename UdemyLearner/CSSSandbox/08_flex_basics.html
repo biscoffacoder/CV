@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex basics</title>
+    <style>
+        body
+        {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            background-color: blanchedalmond;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container
+        {
+            display: flex;
+            border: 1px solid black;
+            height:200px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            
+
+        }
+        .item
+        {
+            background-color: cadetblue;
+            border: 1px solid white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 5px;
+            width: 200px;
+            
+        }
+        .container2
+        {
+            display: flex;
+            flex-direction: column;
+            width: 220px;
+            border:1px solid black;
+            
+         
+        }
+        .container1
+        {
+            display: flex;
+            flex-direction: row-reverse;
+            border:1px solid black;
+            margin-bottom: 10px;
+            
+        }
+        #item5
+        {
+            
+            flex-basis: 250px;
+            flex-shrink: 0;
+        }
+        #item8
+        {
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+        #item7
+        {
+            flex-grow: 2;
+            flex-basis: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item" id="item1"><h2>Item inside Flex container 1</h2></div>
+        <div class="item" id="item2"><h2>Item inside Flex container 2</h2></div>
+        <div class="item" id="item3"><h2>Item inside Flex container 3</h2></div>
+        <div class="item" id="item4"><h2>Item inside Flex container 4</h2></div>
+    </div>
+    
+    <div class="container1">
+        <div class="item" id="item5"><h2>Item inside Flex container 5</h2></div>
+        <div class="item" id="item7"><h2>Item inside Flex container 7</h2></div>
+        <div class="item" id="item8"><h2>Item inside Flex container 8</h2></div>
+    </div>
+    
+    <div class="container2">
+        <div class="item" id="item9"><h2>Item inside Flex container 9</h2></div>
+        <div class="item" id="item10"><h2>Item inside Flex container 10</h2></div>
+        <div class="item" id="item11"><h2>Item inside Flex container 11</h2></div>
+        <div class="item" id="item12"><h2>Item inside Flex container 12</h2></div>
+    </div>
+    
+</body>
+</html>

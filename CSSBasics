@@ -1,0 +1,184 @@
+everything in a page can be treated as a box, give it height and width, and it can be individually styled using the border.
+When width is defined in px, it means the width of the box, when defined in % it means the width wrt to the page size, so if you magnify/reduce the page size, the % attribute will adjust according to the size, whereas the px will remain constant.
+to use it directly with the tag elements - body{}.
+Create a class and use - .foo{}, in HTML - <div class= "foo">
+Create a id and use - #fooId{}, in HTML - <div id="fooId">
+id has more precedence than class and then tag. id<< class<< tag
+id is unique and can be used in one place, class can be reused in multiple places.
+can use multiple classes in same element by - .foo1{} .foo2{} , in HTML - <div class="foo1 foo2">
+use it in  a HTML page using - <link rel="stylesheet" href="../styles.css">
+inline styling has precedence over cssSheet.
+selector{property:value;}
+- favicons - a small icon on the side of title. favicon.cc Can be used in the <link rel="icon" href="favicon.co">
+- boxmodel styling - 
+    0. position - the position is the outermost cover between the screen and element
+    1. margin - the space that is outside of the border and inside to position. It can be used to increase space between two elements next to each other.
+    2. border - the border lies inside to margin and outside to padding, border can cover the element and can have its own thickness.
+    3. padding - the padding lies inside to border and outside to element. It is the space between border and element.
+    4. element - the original element which resides.
+
+    SCREEN[0.position[1.Margin[2.Border[3.Padding[4.Element]3.Padding]2.Border]1.Margin]0.position]SCREEN
+- inline elements - <span>,<img>,<a> These elements are inline and when used, they'll be next to each other. They use only the space required in the box model.
+- block elements - <h1>,<p>,<div>,<ol>,<ul>,<li>,<form>, these elements take up the complete row as a block rectangle, they dont allow other elements to be side by side.
+- All inline elements do not have access to setting the width of the rectangle it resides in. This is because HTML wants inline elements to act like inline and wants other elements to sit next to it. But if you try to manipulate the width, it wont be able to do so.
+- All block elements can have their width be changed and altered.
+- Using <span> we can make modifications to a block element, this span treats an element like an inline element. Ex - <p>This is a block element. but <span>This is a span</span> inside a block</p>.
+  A span allows you to add css to a block element's part without changing the complete element.
+
+- display - block, inline, inline-block, none
+    1. block - you can style an inline element to act like a block element by adding the display property as block. Adding a width will change the width of the element.
+               Ex - .foo{ display: block; width:100px} 
+    2. inline - a block element can be styled as an inline using the display:inline. Even if you provide the width info, it'll not change and element will continue to sit next to each other.
+               Ex - .foo{ display: inline; width:100px}
+    3. inline-block - inline block, allows the element to be on the same line and also use the width property. So keep elements in the same line and also allow it be sized according to the width.
+               Ex - .foo{display: inline-block}
+    4. none -  When we use none, the element is out of the flow of the page, which means the element is disappeared as well as other elements will take up its space.
+- visibility: hidden; - hides the element but the space it used, still exists on the page, and other elements will only come after it.
+
+- position - static, relative, absolute, fixed
+    1. static - the basic HTML positioning already in place. By default all elements are using static positioning. 
+                Ex. .foo{position: static;}
+    2. relative - Should be understood as adding a margin to where the element should have been in static position.
+                  If  you give an element a relative position, it means that the element's position is now relative to its original static position. 
+                  For ex - A box on the LHS of the screen with positioning relative, if you make .foo{position:relative; left:100px;}. This means that the element will move to the RHS of the screen 100px. 
+                  This is because, it will first see where it used to be in static position, 0,0,0,0. now Left 100 will ask it to move to the RHS of the screen. Left = increase in Left Margin = Movement to RHS of screen. Similar - Top = increase in Top margin = movement to bottom of screen.
+                  If an element is below this element and a Top is used, it'll overlap the below element.           
+    3. absolute - Should be understood as adding a margin to its parent element.
+                  When an element is nested in a parent element, and then it uses the position as absolute, any changes will become related to the parent element.
+                  <div><div></div></div>. When for inner div we use {position:absolute; top:10;} it'll actually move it to the top, since the margin wrt to parent.
+                  When a parent div is set as position absolute, it becomes absolute to the body, which means if you give top... it takes this margin info from outside of body. check the positioningHTML.
+    4. fixed - the element using this, stays fixed even while scrolling. It'll stay there and while scrolling top/bottom it'll be present always                
+
+- Units - em ,rem etc;
+    1. em - means it takes the relative unit from the parent tag. for ex <div><p></p></div>. If we style the width of div as - 2px; and style the p as 2em. This essentially means
+            that parent's value*x = 2*2 px = 4px. so if it was 1em, it'd mean 2*1 = 2px;
+    2. rem - means that the relative unit is taken from the root of the html. for ex as above  <div><p></p></div> div has 2px; p has 2rem; body has 1px. The rem will now find the root element which is body tag\
+             So now using body tag, it'll be 1*2 = 2px;
+
+- Reset browser styles using *{padding:0px, margin:0px;}
+- We can use a container div, and make it the topmost root of body and use it for margin:auto; to make all the content centred.
+- pseudo selectors - We can select elements based on their position like first child, last child, nth child, n+1th child etc and have their own defined properties.
+
+- Media queries - They allow to primarily resize or use styling depending on these queries.
+                  write using - @media(max-width/min-width)etc,  
+                  There are 4 kinds of media type - screen, print, all, speech. We can conditionally load a css with media query using - 
+                  <link  rel="stylesheet" media="screen and (max-width:500px)" href="mobile.css"> - This will load the mobile.css only when the width is less than 500px;
+
+- Flex box -  Modern layout mode in CSS3, "flex" is a vlaue for the display property, replaces float and aligns item both horizontally and vertically. They can be re-ordered via CSS
+              If a container div is assigned display:flex, then it creates all direct child elements as flex items.
+              It aligns all child elements horizontally by default. X axis is called "main axis", Y axis is called "cross axis"
+              When the alignment is done by column(vertically), the roles of the axis get reversed. X axis becomes cross and Y axis becomes main.
+              Flex wrap helps to move elements to next row when screen size decreases.
+              Default setting - horizontally
+              main start = bottom left of the element.
+              main end   = bottom right of the element.
+              cross start = top right of the element.
+              cross end = bottom right of the element.
+              main size = main start to main end. 
+
+              justify-content: align along the main axis (horizontally)
+              align-items:     align items along the cross axis (vertically)
+              align-content:   align when extra space in the cross axis  
+              flex-direction: row
+
+
+CSS styles - 
+
+background-color:blue;    - set the background color of the element.
+background-image: url('./file/img'); - set the background image as required.
+background-repeat: no-repeat; - do not repeat the image more than once.
+background-position: xAxis, yAxis; - move the background image.
+background-position:top, center, left, right, bottom;  - alternate to using x,y axis.
+background-size: cover;   - shows the complete image irrespective of the size;
+background: url(./file/img) no-repeat center center/cover; - shorthand of the above properties.
+background-attachment: fixed; - makes the image fixed on the screen even if you scroll.
+height: 20px/20%;         - set the height of the element
+width: 20px/20%           - set the width of the element
+border: solid 20px;       - sets a solid border with 20px
+border-color:blue         - set the border around the element to blue
+border-top-style: dashed; - the top of the border of an element 
+border-bottom-style
+border-right-style
+border-left-style
+border-width:4px;         - set the width of the border
+border-width: top right bottom left - sets the width for complete border in clockwise direction 
+border-radius:2px;        - Sets a border with rounded edge of 2px;
+border-top-left-raidus:2px; - sets the top left border radius for 2 px rounded.
+color:#B97A95;            - set the element color
+font-size: 200px;         - set the font size;
+font-family: "Sans-Serif" - set the style of font family;
+margin: auto;             - Setting the margin to auto, centers the element as all sides have equal margin.
+margin-top:0px;           - sets the space between the element above and the current element
+margin-bottom:1px;        - sets the space/margin between the element below and the current element.
+margin-start:20px         - sets the space/margin between the element and the screen side being right.
+margin-end:10px;          - sets the space/margin between the element and the screen side being left.
+display: inline;          - makes the element act like a inline element, takes only the space required and allows other element to fall next to it.Width and height manipulation does not work.
+display: block;           - makes the element act as a block element, occupies the entire screen width, does not allow elements to fall next to it. Width and height manipulation works  
+display: inline-block;    - makes the element act as both inline and block, allows elements to fall next to it and also allows width and height manipulation.
+display: none;            - makes the element dissappear from the page, elements can take its place.
+visibility: hidden;       - makes the element dissappear but other elements can't come in its place, empty space is still present in the page.  
+position: static;         - default position of element in HTML  
+position: relative;       - this defines the position of the element with the actual static position of the element. Directions work opposite than expected. When the relative is used, it takes the position from the body, if parent is body.
+position: absolute;       - this defines the position of the element with respect to the parent element, directions work as expected. When the absolute is used, it takes the position from the screen, if parent is body.
+position: fixed;          - this defines the position of the element as fixed, even if you scroll.
+position: sticky;         - this allows the element to be stuck on a place, and it remains there even if we scroll. We can define where it needs to stick once scrollable.
+text-align: center        - centers all inline element to the centre of the page, but has no effect if the display is block and has a width defined.
+margin: 0 auto 0 auto;    - This makes the top margin = 0, right = auto and so on, essentially centering any block element which is using the width manipulation.
+box-sizing:border-box;    - This restricts the defined width, usually padding/margin/border gets added to width and the box size increases, using this property, restricts the box size to defined width, but the elements adjusts themselves inside to accomodate the properties.
+max-width: 100px;         - This is used to have dynamic width alignment. It keeps the max width as 100px, and as soon as we shrink to mobile size, it allows to let the content fall below and not be scrollable.
+float:left; width: 70%    - This style is not used currently but what it does is, it allows elements to stack next to each other with the % being the size. Make use of box-sizing:border-box to avoid spills. Elements added after this are added behind it. not below.
+clear:both;               - Needs to be used with float to clear the float values and make the element to fall below, rather than behind it.
+text-decoration: underline; - Text decoration can be used when working with texts, links etc.
+a:hover {}                - when hovered over a link.
+a:active{}                - when clicked or long pressed, style can be provided.
+a:visited{}               - once the link has been clicked.
+cursor:pointer;           - to use the pointer style when hovered over, we can use this css style.
+list-style:none;          - This removes the bullets from the list.
+line-height:2em;          - This provides line spacing between two line elemenets like Texts.
+div li:last-child{}       - selects the last child element of the list to be styled.
+overflow:auto;
+z-index:1;                - Higher the z index is, the closer the element appears to the screen.
+.foo::before{             - This places the content before the foo div, this will cover the entire div, to bring the contents use z-index:10; 
+    content:'';
+    background:red;
+}            
+
+
+Flexbox styling - 
+
+display:flex;             - Sets the display as a flexbox and sets the default flex direction as row.
+flex-direction:row;       - default direction for setting items row wise. X axis = main axis, Y axis = cross axis
+flex-direction:column;    - aligns the item column wise. X axis = cross axis, Y axis = main axis
+flex-direction: row-reverse - reverses the alignment by bringing last item first and first element to right most of the screen.
+flex-direction: column-reverse - reverses the column alignment by bringing the last item on first.  
+flex-wrap:nowrap;         - By default it makes the elements smaller until it can't anymore, but does not let it move to the next row.
+flex-wrap:wrap;           - Lets the elements move to the next row as the screen size decreases.
+flex-shrink: 0;           - Does not let the width decrease even if the screen is small.
+flex-grow:1;              - Makes the element to grow to the size of the screen, essentially making sure that the flex container does not have empty space left. 
+flex-grow:2;              - If there is a element already with flex-grow:1, it'll grow the double of it.
+flex-basis:0              - This makes the elements which use grow to be exact their values - 1,2,3 etc.
+flex:grow shrink basis;
+flex:1 0 200px;           - essentially means that, set a width of 200px, non shrinkable and growth will be 1 times of this.
+flex:1;                   - If given on all flex-items, the size will be equal if width def is not present.
+align-items: flex-end;    - Depending on the flex-direction: row/column Aligns items across cross axis, to the bottom of the container. This is applicable to the container and not individual flex item as, this defines how the flex container should align all children items.
+align-items: flex-start;  - Depending on the flex-direction: row/column Aligns item across cross axis, to the top of the container. applicable only to container. 
+align-items: stretch;     - Depending on the flex-direction: row/column Stretches the content to the size of the container across the cross axis.
+justify-content: center;  - Depending on the flex-direction: row/column Aligns the flex items on the main axis to the center.
+justify-content: start;   - Depending on the flex-direction: row/column aligns the flex items to the start of the main axis.
+justify-content: end;     - Depending on the flex-direction: row/column aligns the flex items to the end of the main axis.
+justify-content: space-around  -  Equally spaces the elements across the main axis including the edges of the screen.
+justify-content: space-between -  Equally spaces the elements leaving no space at the edges of the screen.
+align-self: flex-start;   - Individual element can be taken and placed using this. It will  however style across the container's flex-direction row/column and either align/justify usecase
+align-self: flex-end; 
+
+
+
+
+
+Media queries - 
+
+@media(max-width: 500px)  - This means that the color will be red until the width is lesser than 500px of the screen.
+{color:red} 
+@media(min-width: 500px)  - This means that color will be blue until the width is greater than 500px;
+{color:blue}
+@media(min-width:501px) and (max-width: 800px) - This means that 800px<width>501px

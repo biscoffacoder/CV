@@ -1,0 +1,85 @@
+Topics to be covered in CSS Advanced - 
+1. Targeted Selectors.
+2. Psuedo Selectors
+3. Box shadows
+4. Text-shadows
+5. CSS variables
+6. Keyframe animations
+7. CSS transitions
+8. CSS Transform
+
+ - Targeted Selectors - If we want to select a direct child of  a parent and style it, We can use Targeted Selectors
+                        This allows us to style only the direct children. .foo > p{} This means the direct "p" child elements of foo parent.
+- Psuedo Selectors 
+                    1. nthChild - Select childs of the elements using li:first-child etc..
+                    2. after   - This adds content after the element, but it does not add in the actual DOM object. It gets added via style.
+                    3. before   - This gets added before the elementin use. Same as above.
+
+-Box shadows -      Individual boxes can be stylised using box-shadow - offset-x, offset -y 
+
+-CSS variables - css varibales can be declared using --variable: value, and can be used as property: var(variable)global variables can be defined in a global scope using :root{
+    --primary-color: lightblue;
+}
+
+- Keyframe animation - any element that has a middle point can be animated. To tell CSS that this needs to be animated,
+                       we need to specify animation-name: variableName.
+
+- CSS transitions    - Transitions happen on a event like hover or click etc.
+
+- CSS Transform      - Trasnform how the element is currently present in the screen, transform: rotate(25deg)/ skew(25deg) / scale(2)
+
+
+CSS Styling - 
+.foo > h1{color: red}       - Direct child of foo = "h1" and style this as red.
+.foo + p {}                 - Any p tag directly after <foo></foo>.
+a[target]{}                 - Select using the attribute of a tag, can be used for any element.
+a[target='_blank']          - Select using the attribute value of a tag.
+li{SomeValue $}*20          - Generates a list with text "SomeValue" incremented by number and 20 of them. Shorthand
+li:first-child{}            - Style the first child;
+li:last-child{}             - Styles the last child;
+li:nth-child(2){}           - Styles the 2nd child.
+li:nth-child(odd){}         - Every odd child can be styled using this.
+li:nth-child(even){}        - Every even child can be styled using this
+li:nth-child(Xn+offset){}   - Offset is where the first style will be put in effect and then after every X times.
+li:nth-child(3n+2){}        - Styles the 2nd element and then after every 3rd element from the 2nd element. 
+.foo:before{content:'*'}    - Adds * before the foo element. But it does not get added to DOM. Can check using F11.
+.foo:after{content:'*'}     - Adds * after the foo element.
+box-shadow: offset-x offset-y blur-radius spread-radius color ;  - Puts shadows on any box, x axis, y axis, z axis
+box-shadow : inset/offset offset-x offset-y blur-radius spread-radius color; Inset/offset gives the feel of coming in and out of the box.
+box-shadow: 10px 10px 3px blue; shadow on x, y and blurred by 3 color blue;
+box-shadow:-5px -5px  10px 1px red; shadow on x, y, blurred by 10 and 1px spread across; 
+text-shadow: h-shadow v-shadow  blur color ; horizontal shadow, vertical shadow, blur, 
+text-shadow: 10px 10px 0.2rem blue; - Creates a shadow on the text horizontally and vertically with a blur of 0.2rem. 
+                                    We cna use negative values as well.
+:root{
+    --primary-color: blue;      - Creating variables with values that can be re-used again to minimise repetition
+    --foo-red:red;
+}
+animation-name: foo;            - The animation name property needs to be assigned to an element being animated, ex a div etc.
+animation-duration: 2s;         - Have this animation for 2 seconds.
+animation-iteration-count:2;    - Set the number of times this should happen.
+aniamtion-fill-mode: forwards;  - Keep the "to" position as final.
+animation-delay:2s;             - The animation will start after 2 seconds;
+animation-direction: alternate-reverse;                     - Reverse the direction of animation.
+animation-timing-function: ease-in/ease-out/ease-in-out;    - Decides how the animation should start/end.
+aniamtion: name duration fill-mode delay timing;
+animation: foo 5s forwards 2s ease-out;
+@keyframes foo{ from{width:200px} to{width:600px;}} - After creating an animation variable, we need to set what property needs to be animated.
+                                                      From  property acts as a starting point, to acts as a ending point.
+@keyframes foo{ 25%{top:0; left:300px;} 50%{top:20px;left:0px;}}
+transition-property: property;
+transition-property: background; - Transition can be used on a property but it'll be trigered only on an event. In this case, hover is the
+                                   trigger.
+transition-duration:2s;          - How long should the transition be.
+transition-delay:3s;    
+transition-timing-function: ease-in-out;
+transition: property duration timing delay;
+transition: background, border-radius 2s ease-in 2s;
+transition: all 2s ease-in 2s;      
+foo:hover{background:red;}
+transform: rotate(25deg);         - Rotate the element by 25 degrees.
+transform: skew(25deg);           - Skew the element by 25deg
+transform: scale(3)               - Scale the element by 3times.
+transform: translateY(100px);     - Directly move the element from Y axis by 100px;
+transform: translateX(100px);     - Direclty move the element from X axis
+transform: translate(X,Y)    

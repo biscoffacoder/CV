@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="CSSPositioning.css">
+</head>
+
+<body>
+    <div id="top">
+        <span>position: relative;
+            height: 100px;
+            width:100px;</span>
+    </div>
+    <div id="middle">
+        <span>position: relative;
+            height: 100px;
+            width:100px;
+            left:100px;
+        </span>
+    </div>
+    <div id="bottom">
+        <span>height: 100px;
+            width:100px;
+            position: relative;
+            left: 200px;
+        </span>
+    </div>
+
+    <div id="container">
+        width:200px;
+        height: 200px;
+        position: relative;
+        left:100px;
+        <div id="top1">
+            width:100px;
+            height:100px;
+            position: relative;
+            right:10px;
+        </div>
+    </div>
+    <div id="bottom2">
+        width:100px;
+        height:100px;
+        position: relative;</div>
+    <div id="container2">
+        width:200px;
+        height: 200px;
+        position: absolute;
+        left:100px;
+        <div id="middle1">
+            width:100px;
+            height:100px;
+            position: absolute;
+            right:10px;</div>
+    </div>
+    <div id="bottom1">
+        width:100px;
+        height:100px;
+        position: absolute;
+        right:30px;</div>
+    <div id="fix">
+        width:100px;
+        height:100px;
+      position: fixed;
+        right:100px;
+        top:100px;
+    </div>
+    <h1>BODY</h1>
+</body>
+
+</html>

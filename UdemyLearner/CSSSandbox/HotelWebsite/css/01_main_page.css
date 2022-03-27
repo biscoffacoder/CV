@@ -1,0 +1,271 @@
+*
+{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+.container
+{
+    min-width: 500px;
+   
+}
+.bg-dark
+{
+    background-color: darkslategray;
+    width:100%;
+}
+.bg-light
+{
+    background-color:#DEEDF0;
+    width: 100%;
+    height: inherit;
+}
+.btn
+{
+    display: inline-block;
+    background-color: #082032;
+    color: white;
+    padding:20px;
+    margin-top: 20px;
+   
+
+}
+.btn:hover
+{
+    background-color: #055052;
+    color: whitesmoke;
+}
+.primary-header
+{
+    color: #055052;
+}
+.para
+{
+    line-height: 30px;
+}
+#nav-bar
+{
+    width: 100%;
+    background-color: #082032;
+    overflow: auto;
+}
+#logo
+{
+   float:left;
+  padding:10px;
+  padding-bottom:0px;
+}
+a
+{
+    color:honeydew;
+    text-decoration: none;
+}
+#nav-bar ul
+{
+    float: right;
+    list-style: none;
+}
+#nav-bar ul li
+{
+    float:left;
+}
+#nav-bar ul li a
+{
+    padding:20px;
+    display: block;
+}
+#nav-bar ul li a:hover
+{
+    background-color: #055052;
+}
+#nav-bar .container .selected
+{
+    background-color: #055052;
+}
+.headbg
+{
+    background-image: url('../images/hotel-room.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    opacity: 0.9;
+    text-align: center;
+}
+.caption
+{
+   padding-top: 100px;
+    text-align: center;
+    color:#171010;
+    font-size: 2.9em;
+}
+
+.para
+{
+    padding: 20px;
+    text-align: center;
+    color: black;
+}
+.caption-light
+{
+   padding-top: 100px;
+    text-align: center;
+    color: white;
+    font-size: 2.9em;
+}
+
+.para-light
+{
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+}
+.sec-info
+{
+    height:350px;
+    overflow: hidden;
+}
+.sec-left
+{
+    float:left;
+    width:50%;
+    height:inherit;
+    overflow:hidden;
+    
+}
+.sec-left .sec-image
+{
+    height: inherit;
+    width: 100%;
+}
+.sec-right
+{
+    float:right;
+    width:50%;
+    overflow: hidden;
+    text-align: center;
+    height: inherit;
+}
+
+#sec-util
+{
+    height:300px;
+    
+}
+.amenities
+{
+    background-color: #334756;
+    float: left;
+    width: 33.3%;
+    color:white;
+    height: inherit;
+    text-align: center;
+    
+    
+}
+.amenities:nth-child(2)
+{
+    background-color: #082032;
+    color:DEEDF0;
+}
+
+.amenities .util-head 
+{
+    padding:20px;
+    margin-bottom: 10px;
+}
+.amenities .util-para
+{
+   padding:5px;
+    margin-bottom: 10px;
+}
+.amenities .icons
+{
+    padding:20px;
+}
+.foot
+{
+   
+    border-bottom: none;
+    text-align: center;
+    background-color: #082032;
+    color:white;
+    width: 100%;
+    height:45px;
+    line-height: 40px;
+}
+
+/**About us**/
+#sec-heading
+{
+    padding:20px;
+    text-align: left;
+}
+#sec-para
+{
+   
+    padding:20px;
+    padding-top: 0px;
+    text-align: left;
+}
+.sec-right img
+{
+  padding-top: 20px;
+  height:90%;
+    border-radius: 50%;
+    width: 50%;
+
+}
+.testimonials
+{
+    height:500px;
+    background-image: url('../images/testimonial-bg.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    opacity: .9;
+    text-align: center;
+    overflow: hidden;
+    
+}
+#testimonial-heading
+{
+    margin-top: 10px;
+    padding: 10px;
+    color:black;
+    display: inline-block;
+    opacity: 1;
+  }
+.guest-com
+  {
+height: 110px;
+width: 70%;
+background-color: #055052;
+margin:40px 0;
+display: inline-block;
+text-align: left;
+opacity: .9;
+  }
+  .guest-com .com-image
+  {
+      float: left;
+      width: 10%;
+  }
+.guest-com .com-image img
+{
+    
+    width: 100px;
+    height:100px;
+    border-radius: 50%;
+    padding:10px;
+}
+.guest-com .com-comment
+{
+    margin-top: 20px;
+   float: right;
+   width: 90%;
+    text-align: center;
+    color:white;
+}

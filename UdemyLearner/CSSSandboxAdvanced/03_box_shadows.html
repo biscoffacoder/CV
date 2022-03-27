@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadows</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: thistle;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+        }
+
+        .box {
+            padding: 10px;
+            background: violet;
+            border: 1px solid black;
+            margin: 10px;
+            color: white;
+            box-shadow: 10px 10px 2px 2px blue;
+        }
+
+        .box h1 {
+            text-shadow: 0.2rem 0.3rem slateblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>Heading 1</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel iure labore, impedit laudantium adipisci quis?
+    </div>
+    <div class="box">
+        <h1>Heading 2</h1>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, hic!
+    </div>
+    <div class="box">
+        <h1>Heading 3</h1>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero sit illo eos quia nulla.
+
+    </div>
+
+</body>
+
+</html>

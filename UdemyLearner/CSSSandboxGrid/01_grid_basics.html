@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Basics</title>
+    <style>
+        body {
+            background: lightgrey;
+        }
+
+        .grid {
+            display: grid;
+            /* grid-template-columns: repeat(2, 1fr); */
+            grid-template-columns: 200px auto 100px;
+            grid-gap: 20px;
+
+        }
+
+        .item {
+            height: 100px;
+            background: lightpink;
+            text-align: center;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 200px auto;
+            gap: 10px;
+        }
+
+        aside {
+            background: chocolate;
+        }
+
+        .content {
+            background: coral;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+        <div class="item">Item 5</div>
+        <div class="item">Item 6</div>
+
+    </div>
+
+    <main>
+
+        <aside>
+            <h2>This is NavBar side</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam necessitatibus nemo at nam, illo nihil!
+            </p>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+                <li><a href="">Home</a></li>
+            </ul>
+        </aside>
+        <div class="content">
+            <h1>This is main content</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, reiciendis!</p>
+        </div>
+    </main>
+</body>
+
+</html>

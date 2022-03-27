@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Area</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: lightyellow;
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                'header header header'
+                'menu content content'
+                'box1 box2 box3'
+                'footer footer footer';
+            border: 1px solid lightgray;
+            gap: 2px;
+        }
+
+        .header,
+        .menu,
+        .content,
+        .box1,
+        .box2,
+        .box3,
+        footer {
+            border: 1px solid lightslategray;
+        }
+
+        .header {
+            text-align: center;
+            grid-area: header;
+        }
+
+        .menu {
+            grid-area: menu;
+        }
+
+        .content {
+            grid-area: content;
+        }
+
+        .box1 {
+            grid-area: box1;
+        }
+
+        .box2 {
+            grid-area: box2;
+        }
+
+        .box3 {
+            grid-area: box3;
+        }
+
+        .footer {
+
+            text-align: center;
+            grid-area: footer;
+        }
+
+        @media (max-width:500px) {
+            .container {
+                grid-template-areas:
+                    'header'
+                    'menu'
+                    'content'
+                    'box1'
+                    'box2'
+                    'box3'
+                    'footer';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>My Website</h1>
+        </div>
+
+        <aside class="menu">
+            <h2>My Menu</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <ul>
+                <li>MenuItem 1</li>
+                <li>MenuItem 2</li>
+                <li>MenuItem 3</li>
+                <li>MenuItem 4</li>
+            </ul>
+        </aside>
+        <section class="content">
+            <h2>My Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis quos eum deleniti itaque voluptates
+                culpa tempore odit dolores? Dolorum soluta natus harum ut iusto repudiandae dolore unde cupiditate
+                tempore atque enim, minima vero praesentium rerum exercitationem voluptatum! Rem, non dolor.</p>
+        </section>
+
+        <div class="box1">
+            <h2>Box1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, voluptas officia modi doloremque ut
+                corporis laborum porro ipsa maxime veniam?</p>
+        </div>
+        <div class="box2">
+            <h2>box2</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta reprehenderit quo enim provident ipsam
+                quae saepe explicabo, beatae at incidunt laboriosam assumenda perspiciatis quaerat magnam, libero
+                dolores dolorem commodi voluptatem!</p>
+        </div>
+        <div class="box3">
+            <h2>box3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem impedit ullam delectus, nihil qui sed
+                sit aliquam deserunt quod? Quae temporibus id aut culpa sed.</p>
+        </div>
+        <footer class="footer">
+            <p>Copyright: 2021</p>
+        </footer>
+    </div>
+</body>
+
+</html>

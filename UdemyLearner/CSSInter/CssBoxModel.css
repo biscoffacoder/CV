@@ -1,0 +1,112 @@
+#top
+{
+    background-color: gold;
+    width:200px;
+    height:200px;
+    margin:2px 2px 2px 2px;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-color:indigo;
+    padding: 3px 3px 3px 3px;
+    
+}
+
+#middle
+{
+    
+    background-color: blue;
+    width:200px;
+    height:200px;
+    margin:2px 2px 2px 2px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-color:indigo;
+    padding: 3px 3px 3px 3px;
+}
+
+#bottom
+{
+    
+    background-color:red;
+    width:200px;
+    height:200px;
+    margin:2px 2px 2px 2px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-color:indigo;
+    padding: 3px 3px 3px 3px;
+}
+#top1
+{
+    background-color: lightcoral;
+    width:200px;
+    height:200px;
+    margin-left: 1050px;
+    border-bottom-width: 5px;
+    border-bottom-style: dotted;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-top-width: 5px;
+    border-top-style: solid;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-color:indigo;
+    padding: 3px 3px 3px 3px;
+    
+}
+
+#middle1
+{
+    
+    background-color: aqua;
+    width:200px;
+    height:200px;
+    margin-left: 840px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-top-width: 10px;
+    border-top-style: dotted;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-color: crimson;
+    padding: 3px 3px 3px 3px;
+}
+
+#bottom1
+{
+    
+    background-color: grey;
+    width:200px;
+    height:200px;
+    margin-left: 630px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-right-width: 2px;
+    border-right-style: solid;
+    border-top-width: 4px;
+    border-top-style: dashed;
+    border-left-width: 2px;
+    border-left-style: solid;
+    border-color:indigo;
+    padding: 3px 3px 3px 3px;
+}
